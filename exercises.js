@@ -117,9 +117,43 @@ This function takes in a number parameter age and returns a Boolean value true o
 
 /*21. Declare a function named contentFiller which takes in a single parameter which will be an object.  Write a for loop that will put 5 random numbers between the values of 0 to 20 in the contents array in the bigBox object you created in exercise 14.  Console log the result.*/
 
+
+
+
 /*22.  Declare a function named firstReverse which takes a single parameter str.  This function will take a string parameter being passed in and return the string in reverse order.*/
+hi = "hello world";
+
+function firstReverse(str){
+  for(var i = str.length-1; i>=0; i--){
+  console.log(str[i]);
+  }
+}
+firstReverse(hi);
+
 
 /*23. Declare a function named letterCap which takes a single parameter str. This function will capitalize the first letter of the string you pass in to invoke the function. 
 */
+yo = "yo girl";
+function letterCap(str){
+  return str[0].toUpperCase() + str.slice(1);
+}
+console.log(letterCap(yo));
 
 /*24. Declare a function named longestWord which takes a single parameter str. This function will return the longest word in the string when you invoke this function.*/ 
+
+hello = "in a land far, far away";
+
+function longestWord(str){
+  var strToArray = str.split(" ");
+  var currentWord = " ";
+  for(var i = 0; i<strToArray.length; i++){
+    if(strToArray[i].length > currentWord.length){
+      currentWord = strToArray[i];
+    }
+  }
+  return currentWord;
+
+}
+
+console.log(longestWord(hello));
+ 
