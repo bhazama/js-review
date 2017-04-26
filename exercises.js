@@ -9,15 +9,50 @@ Now, unleash your coding beast!
 /*1.  Variables with a String as their value.
 Declare variables named yourName, neighborName, teacherName.  Console log each variable.*/
 
+var yourName = "Brendan";
+console.log(yourName);
+
+var neighborName = "Kim";
+console.log(neighborName);
+
+var teacherName = "Vic";
+console.log(teacherName);
+
 /*2. Variable with a Number as their value.
 Declare variables named numberOfFloorsBurjKhalifa, TokyoOlympicsYear. Please assign the actual data for each variable.
 Console log each variable.*/
 
+var numberOfFloorsBurjKhalifa= 163;
+console.log(numberOfFloorsBurjKhalifa);
+
+var TokyoOlympicsYear= 2020;
+console.log(TokyoOlympicsYear);
+
+
 /*3. Variables with Boolean values
 Declare variables named lovesPrepClass, eatsDonuts, drinksGin.  Console log each variable.*/
 
+
+var lovesPrepClass = true;
+console.log(lovesPrepClass);
+
+var eatsDonuts = false;
+console.log(eatsDonuts);
+
+var drinksGin = false;
+console.log(drinksGin);
+
+
 /*4. Variable with Null values
 Declare variables named completedCodingChallenge, traveledToSpace.  Console log each variable*/
+
+
+var completedCodingChallenge = null;
+console.log(completedCodingChallenge);
+
+var traveledToSpace = null;
+console.log(traveledToSpace);
+
 
 /*5.  Variables with Array for its value.
 Declare a variable named japanPrefectures and assign the value of any 5 prefectures in Japan.
@@ -25,11 +60,22 @@ Console log the variable
 Console log the value at index 1.
 Console log the value at index 3.*/
 
+var japanPrefectures = ["Hokkaido", "Niigata","Chiba", "Fukuoka", "Osaka"];
+console.log(japanPrefectures);
+console.log(japanPrefectures[1]);
+console.log(japanPrefectures[3]);
+
+
 /*6.  Variable with Array for its value.
 Declare a variable named planets and assign the value of each planet in our solar system, in the order of distance from the sun.  
 Console log the variable
 Console log "Earth" using the index position
 Console log "Uranus" using the index position*/
+
+var planets = ["Mercury","Venus","Earth", "Mars","Jupiter","Saturn","Uranus","Neptune"];
+console.log(planets);
+console.log(planets[2]);
+console.log(planets[6]);
 
 /*7. Variables with Array for its value.
 Declare a variable named india and assign the value of 3 popular tourist attractions.  
@@ -80,6 +126,14 @@ Add a property named contents and set it to be an empty array
 
 console log the object*/
 
+var bigBox = {
+  size: Math.floor((Math.random() * 50) + 1),
+  color: "blue",
+  contents:  [],
+};
+
+console.log(bigBox);
+
 /*15.  Declare a literal object named "colorMeBadd" with properties and values set to:
 
    iro        => [literal object]
@@ -105,17 +159,47 @@ var roster = ["Alex", "Laura", "Sami", "Jasmine", "Adam", "Dakota", "Jonathon", 
 
 i.e. "The locaton at 0 is Tokyo."*/
 
+
+
 /*18. Declare a function named addUp.
 This function will take a number parameter and add up all the numbers from 1 to that number.
 The parameter will be any number from 1 to 88.*/
 
+
+
 /*19. Declare a variable named oddNumbers and assign it to an empty array
 Use a for loop to add only odd numbers to an Array.  Add 30 odd numbers to the oddNumbers variable starting with the value of 1.*/
+var oddNumbers = [];
+
+for (var i = 0; i<62;i++){
+  if(i%2 === 1){
+    oddNumbers.push(i);
+  }
+}
+console.log(oddNumbers);
 
 /*20.  Declare a function named oldEnough.
 This function takes in a number parameter age and returns a Boolean value true or false if the age is lower than the minimum legal drinking age in the Antigua. Invoke this function by passing in a number value.  Google search Antigua's minimum drinking age to confirm the number value.  Store the return value to a variable named drinkinAlready and console log this variable*/
+function oldEnough(age){
+  if(age >= 16){
+    return true;
+  }else{
+    return false;
+  }
+}
 
+var drinkinAlready = oldEnough(15);
+console.log(drinkinAlready);
 /*21. Declare a function named contentFiller which takes in a single parameter which will be an object.  Write a for loop that will put 5 random numbers between the values of 0 to 20 in the contents array in the bigBox object you created in exercise 14.  Console log the result.*/
+function contentFiller(obj){
+  for(var i = 0;i<6;i++){
+    obj.contents = Math.floor((Math.random()*20)+1);
+    console.log(obj);
+  }
+}
+
+contentFiller(bigBox);
+
 
 
 
